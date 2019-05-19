@@ -24,5 +24,22 @@ namespace MyWPF_1
         {
             InitializeComponent();
         }
+
+
+
+        private void RibbonButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("你点击的是复制功能.");
+        }
+
+        private void RibbonButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("你点击的是保存功能");
+        }
+
+        private void m1_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("你点击的是删除功能");
+        }
     }
 }

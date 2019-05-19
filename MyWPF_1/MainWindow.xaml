@@ -7,6 +7,72 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Ribbon Grid.Row="0">
+            <!--Ribbon Quick Access Toolbar-->
+            <Ribbon.QuickAccessToolBar>
+                <RibbonQuickAccessToolBar>
+                    <RibbonButton SmallImageSource="Resources\Images\Save_30px.png" />
+                    <RibbonSplitButton SmallImageSource="Resources\Images\Undo_30px.png">
+                        <RibbonSplitMenuItem Header="Undo1" />
+                        <RibbonSplitMenuItem Header="Undo2" />
+                        <RibbonSplitMenuItem Header="Undo3" />
+                    </RibbonSplitButton>
+                    <RibbonSplitButton SmallImageSource="Resources\Images\Redo_30px.png">
+                        <RibbonSplitMenuItem Header="Redo1" />
+                        <RibbonSplitMenuItem Header="Redo2" />
+                        <RibbonSplitMenuItem Header="Redo3" />
+                    </RibbonSplitButton>
+                </RibbonQuickAccessToolBar>
+            </Ribbon.QuickAccessToolBar>
+
+            <!--Ribbon Help Pane Content-->
+            <Ribbon.HelpPaneContent>
+                <RibbonButton SmallImageSource="Resources\Images\Help_30px.png" />
+            </Ribbon.HelpPaneContent>
+
+            <!--Ribbon Application Menu-->
+            <Ribbon.ApplicationMenu>
+                <RibbonApplicationMenu KeyTip="F">
+                    <RibbonApplicationMenuItem Header="Save" Width="150" ImageSource="Resources\Images\Save_30px.png"/>
+                    <RibbonApplicationMenuItem Header="Options" ImageSource="Resources\Images\Settings_30px.png" />
+                </RibbonApplicationMenu>
+            </Ribbon.ApplicationMenu>
+
+            <!--Ribbon Tab #1 Home-->
+            <RibbonTab Header="Home" KeyTip="H">
+                <RibbonGroup Header="Home">
+                    <RibbonMenuButton LargeImageSource="Resources\Images\Paste_30px.png" Label="Paste" KeyTip="V">
+                        <RibbonMenuItem Header="Keep Text Only" />
+                        <RibbonMenuItem Header="Keep Source Format" />
+                    </RibbonMenuButton>
+
+                    <RibbonButton SmallImageSource="Resources\Images\Undo_30px.png" Label="Copy" Click="RibbonButton_Click" />
+                    <RibbonButton SmallImageSource="Resources\Images\Redo_30px.png" Label="Format" />
+                </RibbonGroup>
+
+                <RibbonGroup Header="Operation">
+                    <RibbonButton LargeImageSource="Resources\Images\Delete_30px.png" Label="Delete" />
+                    <RibbonButton SmallImageSource="Resources\Images\Save_30px.png" Label="Save" />
+                    <RibbonButton SmallImageSource="Resources\Images\Print_30px.png" Label="Print" />
+                </RibbonGroup>
+            </RibbonTab>
+
+            <RibbonTab Header="View" KeyTip="V">
+                <RibbonGroup Header="视图">
+                    <RibbonButton x:Name="m1" LargeImageSource="Resources\Images\Delete_30px.png" Label="删除" Click="m1_Click"  />
+                    <RibbonButton SmallImageSource="Resources\Images\Save_30px.png" Label="保存" Click="RibbonButton_Click_1" />
+                    <RibbonButton SmallImageSource="Resources\Images\Print_30px.png" Label="打印" />
+                </RibbonGroup>
+            </RibbonTab>
+
+            <RibbonTab Header="Help">
+
+            </RibbonTab>
+        </Ribbon>
     </Grid>
 </Window>
